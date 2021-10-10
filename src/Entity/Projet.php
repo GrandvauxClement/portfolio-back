@@ -49,6 +49,11 @@ class Projet
      */
     private $enLigne;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $url;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -122,6 +127,18 @@ class Projet
     public function setEnLigne(string $enLigne): self
     {
         $this->enLigne = $enLigne;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(?string $url): self
+    {
+        $this->url = $url;
 
         return $this;
     }
